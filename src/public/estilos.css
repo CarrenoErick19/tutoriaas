@@ -1,0 +1,269 @@
+/*estilo del cuerpo*/
+*{
+    margin: 0px 0px 0px 0px ;
+    padding: 0px 0px 0px 0px ;
+
+    box-sizing: border-box;
+}
+body {
+    background: -webkit-linear-gradient(to right, #488256, #3cb2d3);
+    background: linear-gradient(to right, #488256, #3cb2d3);
+    background-image: url(IMG/Turoriales_Virtuales.jpg );
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+
+}
+
+footer, .header {
+    background:rgb(0, 0, 0);
+    
+}
+.footer  {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.836);
+    padding: 2%;
+    box-sizing: border-box;
+    color: seashell;
+    text-align: center;
+    font-size: 17px;
+    font-family:'Baloo Tamma 2', sans-serif;  
+}
+
+
+/*Estilodelmenu*/
+ul, ol {
+    list-style:none;
+}
+.nav > li {
+    float:right;
+}
+.nav li a {
+    background-color:black;
+    color:#fff;
+    text-decoration:none;
+    padding:58px 70px;
+    display:block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.nav li a:hover{
+    background-color: gray;
+}
+
+.header img{
+    margin: 15px 0px 15px 100px;
+    width: 300px;
+    height: 100px;    
+}
+
+/*Boton del inicio*/
+.a_inicio{
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    text-transform: uppercase;
+    font-family:'Baloo Tamma 2', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    background: rgb(132, 128, 128);
+    margin: 16px 25px 16px 25px;
+    padding: 50px;
+    border-radius: 30px;
+    transition: color 0.5s, background 0.5s;
+}
+.a_inicio:hover{
+    background-color:#276031 ;
+}
+.a_inicio:active{
+    box-shadow: inset 0 0 20px rgb(255, 255, 255);
+}
+
+
+/*estilo del formulario*/
+
+
+.inicio{
+    background:#000000bf;
+    padding: 37px;
+}
+
+.inicio table{
+    margin-top: 52px;
+    margin-bottom: 55px;
+
+}
+
+.container1 {
+    width: 100%;
+    max-width: 550px;
+    margin: auto;
+    margin-top: 50px ;
+    margin-bottom: 50px;
+    display: grid;  
+    gap: 1.6em;
+    
+}
+
+.container1 h1{
+    color:rgb(255, 255, 255);
+    font-family:'Baloo Tamma 2', sans-serif;
+    font-weight: bolder;
+    font-size: xx-large;    
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+.container1 h2{
+    text-align: center;
+    color:rgb(255, 255, 255);
+    font-family:'Baloo Tamma 2', sans-serif;
+    font-weight: bolder;
+    font-size: xx-large;    
+    margin-bottom: 40px ;
+}
+.container1 p{
+    text-align: center;
+    color:rgb(255, 255, 255);
+    font-family:'Baloo Tamma 2', sans-serif;
+
+}
+.container1 > .content{
+    background:rgb(38, 45, 71);
+    border: 2px solid #158000;
+    padding: 10px;
+    border-radius: 25px;
+    text-align: center;
+    color: seashell;
+    font-size: 15px;    
+}
+
+.container1 button {
+    display: block;
+    font-family:'Baloo Tamma 2', sans-serif;
+    background: -webkit-linear-gradient(to right, #36e676, #276031);
+    background: linear-gradient(to right, #1cbf58, #4a7651);
+    margin: 20px;
+    align-items: center ;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    width:80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    border: 0;
+}
+
+/*-------TABLE------*/
+.container1 table{
+    background-color: white;
+    text-align: center;
+    width: 500px;
+    font-size: 15px;
+}
+th, td {
+    padding: 5px 5px 5px 5px;
+}
+thead {
+    background-color: #158000;
+    border-bottom: solid 5px #87d8a5;
+    color: white;
+}
+table a {
+    color:#fff;
+    text-decoration:none;
+    padding: 10px;
+    margin: 5px;
+    display:block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.btn2{  background-color: rgba(123, 67, 67, 0.775);  }
+.btn3{  background-color: rgba(58, 58, 135, 0.83);   }
+
+
+/*-------FORMULARIO------*/
+input{   
+    color: #4e4646;
+    font-size: 15px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 0;
+}
+input:focus{ 
+    color: #000000;
+    text-align: center;
+}
+
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: #B06AB3;
+    padding-top: 20px;
+}
+
+label{
+    font-family:'Baloo Tamma 2', sans-serif;
+    font-size: 15px;
+    left: 5px;
+    top: 15px;
+    transition: 1s ease all;
+    pointer-events: none;
+}
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.barra::before{
+    content: "";
+    height:2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #87d8a5, #4dff00);
+    transition: 0.5s ease width;
+    left: 0;
+    bottom: 5px;
+}
+input:focus~.barra::before{
+    width: 100%;
+}
+.ingresodocente{
+    
+    width: auto;
+    height: 500px;
+}
+.ingresodocente h2 {
+    font-family:'Baloo Tamma 2', sans-serif;
+text-align: center;
+}
+.calendario h2{
+    text-align: center;
+    color:rgb(255, 255, 255);
+    font-family:'Baloo Tamma 2', sans-serif;
+    font-weight: bolder;
+    font-size: xx-large;    
+    margin-bottom: 25px;
+}
+.calendario {
+    text-align: center;
+    color:rgb(255, 255, 255);
+    font-family:'Baloo Tamma 2', sans-serif;
+    font-weight: bolder;
+    font-size: xx-large;    
+    margin-bottom: 25px;
+}
+
+.container2{
+    margin: 150px auto;
+    width: 600px;
+    border: solid 1px black;
+}

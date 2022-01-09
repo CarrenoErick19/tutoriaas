@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <link rel="icon" type="jpg" href="IMG/icono_tutoria.png">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Inicio</title>
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap" rel="stylesheet">
+   <style>
+        header{
+            background: black;
+        }
+    </style> 
+   <link href="estilos.css" rel="stylesheet" />
+</head>
+<body bgcolor="white">                     
+    <header class="header"> 
+    <div class="container">
+        
+        <figure class="logo">
+
+            <img  width='200'src="IMG/logo_uleam_B.png" alt="Tutorships"/>
+        </figure>   
+       </div>
+    </header>
+    
+    <div class="container1">
+        <div class="inicio">
+            <div id="ingresodocente" class="flex-center">  
+                <form action="./iniciodocente.html" method="POST" name="ENVIAR" >
+                    <h2>Iniciar sesión como</h2>
+                                <div class="b_inicio">
+                                    <a  class="a_inicio" onclick=location.href="/inicio_docente"> DOCENTE</a>                            
+                                </div>
+                    </table>
+                </form>       
+            </div>
+            
+            
+            <div id="ingresoestudiante" class="flex-center">  
+                <form action="./inicioestudiante.html" method="POST" name="ENVIAR" >
+                            <div class="b_inicio">
+                                <a  class="a_inicio" onclick=location.href="/inicio_estudiante"> ESTUDIANTE</a>                        
+                            </div>
+                </form>       
+            </div>  
+        </div>
+    </div>
+      <footer class="footer"> 
+        <p class="text2">Aplicaciones Web I </p>
+        <p class="text2">Trabajo Grupal @2021</p>
+      </footer>
+    </body>
+  </html>

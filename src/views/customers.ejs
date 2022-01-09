@@ -1,0 +1,37 @@
+<%- include ('partials/_header-D'); %>
+
+    <div class="container1">
+         <div class="inicio">
+            <table width="500" height="150" border=1 align=center bgcolor=white >
+                <thead>
+                    <tr>
+                        <th>ID Tutoria</th>
+                        <th>Asignatura</th>
+                        <th>Curso</th>
+                        <th>Fecha</th>
+                        <th>Número de estudiantes</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if (data) { %>
+                        <% for (var i = 0; i < data.length; i++) { %>
+                            <tr>
+                                <td><%= (i + 1) %></td>
+                                <td><%= data[i].asignatura %></td>
+                                <td><%= data[i].curso %></td>
+                                <td><%= data[i].fecha %></td>
+                                <td><%= data[i].n_estudiantes %></td>
+                                <td>
+                                   <a href="/delete/<%= data[i].id_tutoria %>" class="btn2">Eliminar</a>
+                                   <a href="/update/<%= data[i].id_tutoria %>" class="btn3">Actualizar</a>
+                                </td>
+                            </tr>
+                        <% } %>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>>    
+
+    <%- include ('partials/_footer'); %>

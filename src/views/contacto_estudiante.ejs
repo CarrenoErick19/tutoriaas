@@ -1,0 +1,76 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>  
+    <link rel="icon" type="jpg" href="IMG/icono_tutoria.png">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Contacto</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap" rel="stylesheet">
+    <link href="estilos.css" rel="stylesheet" />
+</head>
+<body bgcolor="white">                     
+    <header class="header"> 
+    <div class="container">
+        <nav class="menu">
+            <ul class ="nav">
+                <li> <a href="/"> Salir </a> </li>
+                <li> <a href="/contacto_estudiante"> Contacto </a> </li>
+                <li> <a href="/inicio_estudiante"> Iniciar Sesión </a> </li>
+             </ul>
+        </nav>
+        <figure class="logo">
+            <img  width='200'src="IMG/logo_uleam_B.png" alt="Tutorships"/>          
+        </figure>   
+       </div>
+    </header>
+	
+</BR>
+<div class="container1">
+  <main class="content">
+    <form  action="/contacto_estudiante" method="post">  
+      <div class="form">                            
+          <h1>Contacto</h1>     <br>
+          <div class="grupo">                
+            <label for=""> nombre</label>
+            <input type="text" name="nombre" id="nombre" PlaceHolder='Ingrese un nombre' required><span class="barra"></span> 
+          </div>
+        <div class="grupo">
+            <label for=""> E-Mail</label>
+            <input type="text" name="email" id="email" PlaceHolder='Ingrese su correo electrónico' required><span class="barra"></span>                   
+          </div>
+          <div class="grupo">                
+            <label for=""> Número telefónico</label>
+            <input type="text" name="telefono" id="ntele" maxlength="10" PlaceHolder='Ingrese su número de contacto' onkeypress="return solonumeros(event)" required><span class="barra"></span> 
+          </div>
+          <div class="grupo">                
+            <label for=""> Mensaje</label>
+            <input type="text" name="mensaje" id="mensaje" PlaceHolder='Ingrese el mensaje' required><span class="barra"></span> 
+          <br>
+          <button type="submit" class="btn btn-primary"> Enviar información</button>
+      </div>                                                
+    </form>
+    <script src="validarc.js"></script>    
+  </main>       
+</div>
+
+<script>
+  function solonumeros(e){
+    key=e.keyCode || e.which;
+    teclado=String.fromCharCode(key);
+    numeros="0123456789";  
+    especiales="8-37-38-46"; //array  
+    teclado_especial= false;
+    
+    for(var i in especiales){
+      if(key==especiales[i]){
+        teclado_especial=true; 
+      }
+    }
+    if(numeros.indexOf(teclado)==-1 && !teclado_especial){
+      return false;
+    } 
+  }
+</script>
+
+      
+<%- include ('partials/_footer'); %>

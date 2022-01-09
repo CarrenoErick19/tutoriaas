@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignar Tutoría</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="/" class="navbar-brand">Actualizacion de una Tutoria</a>
+    </nav>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/update/<%= data.id_tutoria %>" method="post">
+                        <div class="form-group">
+                            <input type="text" name="asignatura" value="<%= data.asignatura %>" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="curso" value="<%= data.curso %>"  class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="fecha" value="<%= data.fecha %>" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="n_estudiantes"  value="<%= data.n_estudiantes %>" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            Editar Tutoria
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

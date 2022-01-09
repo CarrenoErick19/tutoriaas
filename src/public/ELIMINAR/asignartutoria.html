@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <link rel="icon" type="jpg" href="IMG/icono_tutoria.png">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Asignar Tutoría</title>
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap" rel="stylesheet">
+   <style>
+        header{
+            background: black;
+        }
+    </style> 
+   <link href="estilos.css" rel="stylesheet" />
+</head>
+<body bgcolor="white">                     
+    <header class="header"> 
+    <div class="container">
+        <nav class="menu">
+
+            <ul class ="nav">
+                <li> <a href="./Inicio.html"> Salir </a> </li>
+                <li> <a href="./calendariodocente.html"> Calendario </a> </li>
+                <li> <a href="./perfildocente.html"> Perfil </a> </li>
+                <li> <a href="./asignartutoria.html"> Asignar Turoría </a> </li>
+                <li> <a href="./principaldocente.html"> Inicio </a> </li>
+             </ul>
+        </nav>
+        <figure class="logo">
+            <img  width='200'src="IMG/logo_uleam_B.png" alt="Tutorships"/>          
+        </figure>   
+       </div>
+    </header>
+ 
+    <div class="container1">
+        <main class="content">
+          <form  action="/add" method="post">  
+            <div class="form">                            
+                <h1>Formulario de asignación de Tutoría</h1>    <br>       
+                <div class="grupo">                
+                    <label for=""> Asignatura</label>
+                    <input type="text" name="asignatura" id="materiatut" maxlength="20" PlaceHolder='Ingrese la asignatura' required><span class="barra"></span> 
+                </div>
+                <div class="grupo">
+                    <label for=""> Curso</label>
+                    <input type="text" name="curso" id="cursotut" maxlength="20" PlaceHolder='Ingrese el curso' required><span class="barra"></span>                   
+                </div>
+                <div class="grupo">                
+                    <label for=""> Fecha</label>
+                    <input type="datetime" name="fecha" id="fechatut" maxlength="20"><span class="barra" ></span> 
+                </div>
+                <div class="grupo">                
+                    <label for=""> Número de estudiantes convocados</label>
+                    <input type="number" name="n_estudiantes" id="estudiantestut"  maxlength="2" PlaceHolder='Ingrese el número de estudiantes' required><span class="barra"></span> 
+                 <br>
+                <button type="submit"> Enviar</button>
+                <p class="warnings" id="warnings"></p>
+            </div>                                                
+        </form>
+        <script src="validar2.js"></script>     
+        </main>       
+      </div>
+
+    </div>
+      <footer class="footer"> 
+        <p class="text2">Aplicaciones Web I </p>
+        <p class="text2">Trabajo Grupal @2021</p>
+      </footer>
+    </body>
+  </html>

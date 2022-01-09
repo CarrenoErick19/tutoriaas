@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <link rel="icon" type="jpg" href="IMG/icono_tutoria.png">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Inicio sesión estudiante</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap" rel="stylesheet">
+    <link href="estilos.css" rel="stylesheet" />
+</head>
+
+<body bgcolor="white">                     
+    <header class="header"> 
+    <div class="container">
+        <nav class="menu">
+            <ol class ="nav">
+                <li> <a href="/"> Salir </a> </li>
+                <li> <a href="/contacto_estudiante"> Contacto </a> </li>
+                <li> <a href="/registro_estudiante"> Registrarse como estudiante </a> </li>
+             </ol>
+        </nav>
+        <figure class="logo">
+            <img  width='200'src="IMG/logo_uleam_B.png" alt="Tutorships"/>          
+        </figure>   
+       </div>
+    </header>
+    
+    <div class="container1">
+      <main class="content">
+        <form  action="/inicio_estudiante" method="POST" id="form">  
+          <div class="form">                            
+              <h1>Ingrese sus credenciales de estudiante</h1>    <br>       
+              <tr>
+                <td width="50" heigth="20"> Usuario: </td>
+                <td width="50" heigth="20" Maxlength='20' >  <input id="name" onkeypress="return solonumeros(event)" onpaste="return false" width="60" heigth="20" Maxlength='10'PlaceHolder='Ingrese su usuario' type="text" font="Franklin Gothic Medium" name="Nom"> <br> </td>
+            </tr>
+            <tr>
+                <td> Contraseña </td>
+                <td> <input id="password" Maxlength='20' PlaceHolder='Ingrese su contraseña' type="password" name="Dire"> <br> </td>
+            </tr>
+              <button type="submit">ENVIAR</button>
+              <p class="warnings" id="warnings"></p>
+          </div>                                                                                          
+        </form>  
+        <script src="validar.js"></script> 
+      </main>       
+    </div>
+
+    <script>
+      function solonumeros(e){
+        key=e.keyCode || e.which;
+        teclado=String.fromCharCode(key);
+        numeros="0123456789";
+        especiales="8-37-38-46"; //array
+        teclado_especial= false;
+        for(var i in especiales){
+          if(key==especiales[i]){
+            teclado_especial=true; 
+          }
+        }
+        if(numeros.indexOf(teclado)==-1 && !teclado_especial){
+          return false;
+        }
+      }
+    </script>
+
+    <%- include ('partials/_footer'); %>

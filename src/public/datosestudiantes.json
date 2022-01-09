@@ -1,0 +1,12 @@
+[
+    {       
+        "nombre": "Eduardo",
+        "apellido": "Mera",
+        "contacto": "0990623964",
+        "direccion": "Calle: 300; Barrio El Porvenir",       
+        "email": "eduar-m@outlook.es",
+        "curso": "5to nivel",
+        "paralelo": "A",
+        "cedula": "1318135472"
+    }
+]

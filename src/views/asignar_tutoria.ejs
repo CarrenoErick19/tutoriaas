@@ -1,0 +1,33 @@
+<%- include ('partials/_header-D'); %>
+
+<div class="container1">
+    <main class="content">
+      <form  action="/add" method="post">  
+        <div class="form">                            
+            <h1>Formulario de asignación de Tutoría</h1>    <br>       
+            <div class="grupo">                
+                <label for=""> Asignatura</label>
+                <input type="text" name="asignatura" placeholder="Asignatura" class="form-control">
+            </div>
+            <div class="grupo">
+                <label for=""> Curso</label>
+                <input type="text" name="curso" placeholder="Curso" class="form-control">
+            </div>
+            <div class="grupo">                
+                <label for=""> Fecha</label>
+                <input type="text" name="fecha" placeholder="Fecha" class="form-control">
+            </div>
+            <div class="grupo">                
+                <label for=""> Número de estudiantes convocados</label>
+                <input type="text" name="n_estudiantes" placeholder="Número de estudiantes" class="form-control">
+             <br>
+             <button type="submit" class="btn btn-primary"> Guardar Tutoria </button>
+             <!-- <button href="/"> Ver Tutorias Asignadas </button> -->
+             <a href="/customers" class="btn1"> Tutorias Asignadas </a>
+        </div>                                                
+    </form>
+    <script src="validar2.js"></script>     
+    </main>       
+  </div>
+
+  <%- include ('partials/_footer'); %>

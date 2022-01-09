@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <link rel="icon" type="jpg" href="IMG/icono_tutoria.png">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Solicitar Tutoría</title>
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap" rel="stylesheet">
+   <style>
+        header{
+            background: black;
+        }
+    </style> 
+   <link href="estilos.css" rel="stylesheet" />
+</head>
+<body bgcolor="white">                     
+    <header class="header"> 
+    <div class="container">
+        <nav class="menu">
+
+            <ul class ="nav">
+                <li> <a href="./Inicio.html"> Salir </a> </li>
+                <li> <a href="./calendarioestudiante.html"> Calendario </a> </li>
+                <li> <a href="./perfilestudiante.html"> Perfil </a> </li>
+                <li> <a href="./solicitar_tutoria"> Solicitar Turoría </a> </li>
+                <li> <a href="./principalestudiante.html"> Inicio </a> </li>
+             </ul>
+        </nav>
+        <figure class="logo">
+            <img  width='200'src="IMG/logo_uleam_B.png" alt="Tutorships"/>          
+        </figure>   
+       </div>
+    </header>
+ 
+    <div class="container1">
+        <main class="content">
+            <form  action="" method="POST" id="form">  
+                <div class="form">                            
+                    <h1>Formulario de asignación de Tutoría</h1>    <br>       
+                    <div class="grupo">                
+                        <label for=""> Asignatura</label>
+                        <input type="text" name="" id="materiatut" maxlength="20" PlaceHolder='Ingrese la asignatura' required><span class="barra"></span> 
+                    </div>
+                    <div class="grupo">
+                        <label for=""> Curso</label>
+                        <input type="text" name="" id="cursotut"  maxlength="20" PlaceHolder='Ingrese el curso' required><span class="barra"></span>                   
+                    </div>
+                    <div class="grupo">                
+                        <label for=""> Nombre del docente</label>
+                        <input type="text" name="" id="nombre" maxlength="20" PlaceHolder='Ingrese el nombre del docente' required><span class="barra"></span> 
+                    </div>
+                    <div class="grupo">                
+                        <label for=""> Motivo</label>
+                        <input type="text" name="" id="motivo"  maxlength="20" PlaceHolder='Ingrese el motivo de la tutoría' required><span class="barra"></span> 
+                     <br>
+                    <button onclick="enviar">
+                        Enviar</button>
+                    <p class="warnings" id="warnings"></p>
+                </div>                                                
+            </form> 
+            <script src="validarsoli.js"></script>     
+        </main>       
+      </div>
+    </div>
+      <footer class="footer"> 
+        <p class="text2">Aplicaciones Web I </p>
+        <p class="text2">Trabajo Grupal @2021</p>
+      </footer>
+    </body>
+  </html>

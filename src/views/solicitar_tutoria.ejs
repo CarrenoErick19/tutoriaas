@@ -1,0 +1,34 @@
+<%- include ('partials/_header-E'); %>
+
+
+<div class="container1">
+    <main class="content">
+      <form  action="/solicitar_tutoria" method="post">  
+        <div class="form">                            
+            <h1>Formulario de solicitud de Tutoría</h1>    <br>       
+            <div class="grupo">                
+                <label for=""> Asignatura</label>
+                <input type="text" name="asignatura" placeholder="Asignatura" class="form-control">
+            </div>
+            <div class="grupo">
+                <label for=""> Curso</label>
+                <input type="text" name="curso" placeholder="Curso" class="form-control">
+            </div>
+            <div class="grupo">                
+                <label for=""> Nombre del docente</label>
+                <input type="text" name="nombre_docente" placeholder="Nombre del docente" class="form-control">
+            </div>
+            <div class="grupo">                
+                <label for=""> Motivo</label>
+                <input type="text" name="motivo" placeholder="Motivo de la tutoría" class="form-control">
+             <br>
+             <button type="submit" class="btn btn-primary"> Solicitar Tutoria </button>
+            
+        </div>                                                
+    </form>
+    <script src="validarsoli.js"></script>     
+  </main>       
+</div>
+
+
+<%- include ('partials/_footer'); %>

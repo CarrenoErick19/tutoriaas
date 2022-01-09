@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <link rel="icon" type="jpg" href="IMG/icono_tutoria.png">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Registro de docentes</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald&display=swap" rel="stylesheet">
+    <link href="estilos.css" rel="stylesheet" />
+</head>
+
+<body bgcolor="white">                     
+    <header class="header"> 
+    <div class="container">
+        <nav class="menu">
+            <ul class ="nav">
+                <li> <a href="/"> Salir </a> </li>
+                <li> <a href="/contacto_docente"> Contacto </a> </li>
+                <li> <a href="/inicio_docente"> Iniciar Sesión </a> </li>
+             </ul>
+        </nav>
+        <figure class="logo">
+            <img  width='200'src="IMG/logo_uleam_B.png" alt="Tutorships"/>          
+        </figure>   
+       </div>
+    </header>
+<div class="container1">
+    <main class="content">
+        <form  action="/registro_docente" method="post">  
+            <div class="form">                            
+                <h1>Registrarse como docente</h1>    <br>       
+                <div class="grupo">                
+                    <label for=""> nombre</label>
+                    <input type="text" name="nombre" id="nombre" PlaceHolder='Ingrese un nombre' required><span class="barra"></span> 
+                </div>
+                <div class="grupo">                
+                    <label for=""> apellido</label>
+                    <input type="text" name="apellido" id="apellido" PlaceHolder='Ingrese un apellido' required><span class="barra"></span> 
+                </div>
+                <div class="grupo">                
+                    <label for=""> Contacto</label>
+                    <input type="text" name="numerotelefono" id="ntele" maxlength="10" PlaceHolder='Ingrese su número de contacto' onkeypress="return solonumeros(event)" required><span class="barra"></span> 
+                </div>
+                <div class="grupo">
+                    <label for=""> Dirección</label>
+                    <input type="text" name="direccion" id="direccion" PlaceHolder='Ingrese su dirección de domicilio' required><span class="barra"></span>                   
+                </div>  
+                <div class="grupo">
+                    <label for=""> E-Mail</label>
+                    <input type="text" name="email" id="email" PlaceHolder='Ingrese su correo electrónico' required><span class="barra"></span>                   
+                </div>
+                <div class="grupo">
+                    <label for=""> Contraseña</label>
+                    <input type="text" name="contrasena" id="contraseña" PlaceHolder='Ingrese una contraseña' required><span class="barra"></span>                   
+                </div>                   
+                <div class="grupo">                
+                    <label for=""> Cedula de identidad</label>
+                    <input type="text" name="cedula" id="cedula" PlaceHolder='Ingrese su cedula de identidad' onkeypress="return solonumeros(event)" required><span class="barra"></span> 
+                 <br>
+                 <button type="submit" class="btn btn-primary"> Enviar información</button>
+            </div>                                                
+        </form>
+        <script src="validarRE.js"></script> 
+    </main>       
+</div>
+
+  <script>
+    function solonumeros(e){
+      key=e.keyCode || e.which;
+      teclado=String.fromCharCode(key);
+      numeros="0123456789";
+      especiales="8-37-38-46"; //array
+      teclado_especial= false;
+      for(var i in especiales){
+        if(key==especiales[i]){
+          teclado_especial=true; 
+        }
+      }
+      if(numeros.indexOf(teclado)==-1 && !teclado_especial){
+        return false;
+      }
+    }
+  </script>
+
+  <%- include ('partials/_footer'); %>
